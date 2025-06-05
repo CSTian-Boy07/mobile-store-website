@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header>
+    <div class="logo">
+        <img src="images.png" alt="Mobile Store Logo">
+        <h1>মোবাইল স্টোর</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">হোম</a></li>
+            <li><a href="#">পণ্য</a></li>
+            <li><a href="#">যোগাযোগ</a></li>
+            <li><a href="#">ব্লগ</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="text" placeholder="মোবাইল খুঁজুন...">
+        <button>🔍</button>
+    </div>
+</header>
+    <section class="products">
+        <div class="product">
+            <img src="SamsungGalaxys215g.jpg" alt="Samsung Galaxy S21">
+            <h2>Samsung Galaxy S21</h2>
+            <p>দাম: ৮০,০০০ টাকা</p>
+            <button onclick="buyNow('Samsung Galaxy S21')">ক্রয় করুন</button>
+        </div>
+        <div class="product">
+            <img src="iPhone 13.jpg" alt="iPhone 13">
+            <h2>iPhone 13</h2>
+            <p>দাম: ১,২০,০০০ টাকা</p>
+            <button onclick="buyNow('iPhone 13')">ক্রয় করুন</button>
+        </div>
+        <div class="product">
+            <img src="oneplus-10-pro-2.jpg" alt="OnePlus 10 Pro">
+            <h2>OnePlus 10 Pro</h2>
+            <p>দাম: ৭৫,০০০ টাকা</p>
+            <button onclick="buyNow('OnePlus 10 Pro')">ক্রয় করুন</button>
+        </div>
+        <div class="product">
+            <img src="Xiaomi Redmi Note 12.jpg" alt="Xiaomi Redmi Note 12">
+            <h2>Xiaomi Redmi Note 12</h2>
+            <p>দাম: ৩০,০০০ টাকা</p>
+            <button onclick="buyNow('Xiaomi Redmi Note 12')">ক্রয় করুন</button>
+        </div>
+         <div class="product">
+            <img src="samsung-galaxy-s10-plus-cardinal-red.jpg" alt="Samsung Galaxy s10 Plus">
+            <h2>Samsung Galaxy s10 Plus</h2>
+            <p>দাম: ৯০,০০০ টাকা</p>
+            <button onclick="buyNow('Samsung Galaxy s10 Plus')">ক্রয় করুন</button>
+        </div>
+        <div class="product">
+            <img src="Oppo-Reno5-Pro-Star-Wish-Red-500x500.jpg" alt="Oppo Reno 5 pro">
+            <h2>Oppo Reno 5 pro</h2>
+            <p>দাম: ৩৮,০০০ টাকা</p>
+            <button onclick="buyNow('Oppo Reno 5 pro')">ক্রয় করুন</button>
+        </div>
+
+        <div class="product">
+            
+              <img src="tecno-camon-40-pro-emerald-lake-green-official-image.webp" alt="Tecno cammon 40 pro">
+            <h2>Tecno cammon 40 pro</h2>
+            <p>Comming Soon</p>
+            <button onclick="buyNow('Tecno cammon 40 pro')">ক্রয় করুন</button>
+        </div>
+
+    
+            
+    </section>
+    <script src="script.js">
+        
+        document.querySelector(".search button").addEventListener("click", function() {
+    let query = document.querySelector(".search input").value;
+    alert("আপনি খুঁজছেন: " + query);
+});
+        function buyNow(productName) {
+    alert(productName + " ক্রয় করার অপশন শীঘ্রই আসছে!");
+}
+    </script>
+</body>
+<footer>
+    <h2>Creator-Asif Ahmed Abir</h2>
+    <p>Email-asifahmedabir9@gmail.Com <br>
+       Address-Shibpur,Atghoria,Pabna
+    </p>
+</footer>
+</html>
