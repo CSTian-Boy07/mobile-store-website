@@ -11,7 +11,8 @@ header {
     align-items: center;
     background-color: #007bff;
     color: white;
-    padding: 15px;
+    padding: 10px 15px;
+    flex-wrap: wrap;
 }
 
 .logo {
