@@ -12,14 +12,19 @@
         <img src="images.png" alt="Mobile Store Logo">
         <h1>মোবাইল স্টোর</h1>
     </div>
-    <nav>
-        <ul>
-            <li><a href="#">হোম</a></li>
-            <li><a href="#">পণ্য</a></li>
-            <li><a href="#">যোগাযোগ</a></li>
-            <li><a href="#">ব্লগ</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+        <li><a href="#home">হোম</a></li>
+        <li><a href="#products">পণ্য</a></li>
+        <li><a href="#contact">যোগাযোগ</a></li>
+        <li><a href="#blog">ব্লগ</a></li>
+    </ul>
+</nav>
+<section id="home">...</section>
+<section id="products" class="products">...</section>
+<section id="contact">...</section>
+<section id="blog">...</section>
+
     <div class="search">
         <input type="text" placeholder="মোবাইল খুঁজুন...">
         <button>🔍</button>
@@ -74,19 +79,28 @@
     
             
     </section>
-    <script src="script.js">
-        
-        document.querySelector(".search button").addEventListener("click", function() {
-    let query = document.querySelector(".search input").value;
-    alert("আপনি খুঁজছেন: " + query);
+<script>
+document.querySelector(".search button").addEventListener("click", function() {
+    let query = document.querySelector(".search input").value.toLowerCase();
+    let products = document.querySelectorAll(".product");
+    products.forEach(function(product) {
+        let title = product.querySelector("h2").textContent.toLowerCase();
+        if (title.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
 });
-        function buyNow(productName) {
+
+function buyNow(productName) {
     alert(productName + " ক্রয় করার অপশন শীঘ্রই আসছে!");
 }
-    </script>
+</script>
+
 </body>
 <footer>
-    <h2>Creator-Asif Ahmed Abir</h2>
+    <h2>Developer-Asif Ahmed Abir</h2>
     <p>Email-asifahmedabir9@gmail.Com <br>
        Address-Shibpur,Atghoria,Pabna
     </p>
